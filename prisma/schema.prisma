@@ -20,6 +20,7 @@ model Product {
   createdAt DateTime @default(now())
   category Category @relation(fields: [categoryID],references: [id])
   categoryID Int
+  stock Int @default(0)
 }
 model Category {
   id Int @id @default(autoincrement())
